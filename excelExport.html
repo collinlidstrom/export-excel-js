@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- https://stackoverflow.com/questions/22317951/export-html-table-data-to-excel-using-javascript-jquery-is-not-working-properl -->
+
+  <title>excelExport.html</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2014-11-29/FileSaver.min.js"></script>
+
+  <!-- jQuery Migrate Plugin : https://github.com/jquery/jquery-migrate/ -->
+  <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+  <script src="https://code.jquery.com/jquery-migrate-3.3.0.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $.support.cors = true;
+      //...
+    });
+  </script>
+
+  <script type="text/javascript" src="exportScript.js"></script>
+
+
+</head>
+
+<body>
+  <h1>Excel Export JavaScript</h1>
+
+  <!-- create a blank iframe -->
+  <iframe id="txtArea1" style="display:none"></iframe>
+
+  <!-- Call the function on: -->
+  <button id="btnExport" onclick="fnExcelReport();"> EXPORT </button>
+
+  <!-- sample table to export to Excel -->
+  <table id="headerTable">
+    <tr>
+      <th>Company</th>
+      <th>Contact</th>
+      <th>Country</th>
+    </tr>
+    <tr>
+      <td>Alfreds Futterkiste</td>
+      <td>Maria Anders</td>
+      <td>Germany</td>
+    </tr>
+    <tr>
+      <td>Centro comercial Moctezuma</td>
+      <td>Francisco Chang</td>
+      <td>Mexico</td>
+    </tr>
+    <tr>
+      <td>Ernst Handel</td>
+      <td>Roland Mendel</td>
+      <td>Austria</td>
+    </tr>
+    <tr>
+      <td>Island Trading</td>
+      <td>Helen Bennett</td>
+      <td>UK</td>
+    </tr>
+    <tr>
+      <td>Laughing Bacchus Winecellars</td>
+      <td>Yoshi Tannamuri</td>
+      <td>Canada</td>
+    </tr>
+    <tr>
+      <td>Magazzini Alimentari Riuniti</td>
+      <td>Giovanni Rovelli</td>
+      <td>Italy</td>
+    </tr>
+  </table>
+
+</body>
+
+</html>
